@@ -35,7 +35,7 @@ of minimum size >= required number is allocated.
   
 I have implemented the first fit startegy  
   
-**Input Format**  
+**Input Format:**  
 The first line of input specifies n, the number of programs, and M the
 number of memory locations. Assume 1 <= n <= 1000 and 1 <=  M <= 10^9.
 The subsequent lines contain a description of the requests to the system.
@@ -53,7 +53,7 @@ H : halt the system.
   
 The sequence of requests will always terminate with H.  
   
-**Output Format**  
+**Output Format:**  
 For every request of type A, print out the address of the starting location
 that is allocated. If the request is pending when the system halts, print -1.
 For every D request, print out a 0 if it is a valid deallocation, else print
@@ -62,7 +62,7 @@ allocated to the program that terminated else print out a 1. Each output
 should be printed on a separate line, in the order in which the requests
 are made. Note that the order in which allocation is done may be different.   
                   
-**Sample Input**   
+**Sample Input:**   
 2 10  
 A 0 5  
 A 1 4  
@@ -71,7 +71,7 @@ D 0 0
 A 1 2  
 H  
   
-**Sample Output**  
+**Sample Output:**  
 0  
 5  
 0  
