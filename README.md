@@ -62,12 +62,12 @@ allocated to the program that terminated else print out a 1. Each output
 should be printed on a separate line, in the order in which the requests
 are made. Note that the order in which allocation is done may be different.   
                   
-Sample Input    Sample Output
-2 10            0
-A 0 5           5
-A 1 4           0
-A 0 4           0
-D 0 0           -1 
-A 1 2           
-H
+Sample Input    Sample Output  
+2 10            0  
+A 0 5           5  
+A 1 4           0  
+A 0 4           0  
+D 0 0           -1  
+A 1 2  
+H  
 
