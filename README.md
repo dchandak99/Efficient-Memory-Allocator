@@ -19,49 +19,49 @@ to be deallocated will be given. You have to check that some amount of
 memory with that starting address was allocated to the program previously, and 
 deallocate it. If the address is incorrect, you should indicate an error. A
 program may also terminate, in which case all memory allocated to it is 
-deallocated.
-
+deallocated.  
+  
 Whenever memory is freed, you have to check if any pending requests for memory
 can now be allocated, and if so do the allocation in the order in which the
 requests were made. Note that when a program terminates, all memory
-allocated to it must be freed, before considering pending requests.
-
+allocated to it must be freed, before considering pending requests.  
+  
 Different strategies are used for deciding the locations to allocate. The
 simplest one is called the first-fit strategy, in which the smallest address
 such that there exist required number of consecutive unallocated locations
 starting from it, is allocated. Another is called the best fit strategy,
 in which the starting address of a block of consecutive unallocated locations
-of minimum size >= required number is allocated. 
-
-I have implemented the first fit startegy
-
-Input Format
+of minimum size >= required number is allocated.   
+  
+I have implemented the first fit startegy  
+  
+Input Format  
 The first line of input specifies n, the number of programs, and M the
 number of memory locations. Assume 1 <= n <= 1000 and 1 <=  M <= 10^9.
 The subsequent lines contain a description of the requests to the system.
-Each request is of one of the following types:
-
-A pid size
-D pid address
-T pid
-H
-
-A pid size :  allocate size consecutive locations to program number pid.
-D pid address : deallocate memory allocated to program number pid at address.
-T pid : Terminate program pid and deallocate all memory allocated to it.
-H : halt the system.
-
-The sequence of requests will always terminate with H.
-
-Output Format
+Each request is of one of the following types:  
+  
+A pid size  
+D pid address  
+T pid  
+H  
+  
+A pid size :  allocate size consecutive locations to program number pid.  
+D pid address : deallocate memory allocated to program number pid at address.  
+T pid : Terminate program pid and deallocate all memory allocated to it.  
+H : halt the system.  
+  
+The sequence of requests will always terminate with H.  
+  
+Output Format  
 For every request of type A, print out the address of the starting location
 that is allocated. If the request is pending when the system halts, print -1.
 For every D request, print out a 0 if it is a valid deallocation, else print
 out a 1. For every T request, print out a 0 if some memory was currently
 allocated to the program that terminated else print out a 1. Each output
 should be printed on a separate line, in the order in which the requests
-are made. Note that the order in which allocation is done may be different. 
-                
+are made. Note that the order in which allocation is done may be different.   
+                  
 Sample Input    Sample Output
 2 10            0
 A 0 5           5
