@@ -37,7 +37,7 @@ I have implemented the first fit startegy
   
 **Input Format:**  
 The first line of input specifies n, the number of programs, and M the
-number of memory locations. Assume 1 <= n <= 1000 and 1 <=  M <= 10^9.
+number of memory locations. Assume 1 <= n <= 1000 and 1 <=  M <= 10<sup>9</sup>.
 The subsequent lines contain a description of the requests to the system.
 Each request is of one of the following types:  
   
